@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_pokemon"
+        android:id="@+id/txt_pokemon"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arr_pokemon"
+        android:entries="@array/evo_pokemoncandies"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/txt_pokemon"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_cp"
+        android:id="@+id/txt_cp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/arr_pokemon"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hp"
+        android:id="@+id/txt_hp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txt_cp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_dust"
+        android:id="@+id/txt_dust"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txt_hp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_power"
+        android:id="@+id/txt_powered"
+        android:layout_below="@+id/txt_dust"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_atk"
+        android:id="@+id/txt_atk"
+        android:layout_below="@+id/txt_powered"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_def"
+        android:id="@+id/txt_def"
+        android:layout_below="@+id/txt_atk"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hp"
+        android:id="@+id/txt_hpbox"
+        android:layout_below="@+id/txt_def"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignBaseline="@+id/txt_cp"
+        android:layout_alignBottom="@+id/txt_cp"
+        android:layout_alignStart="@+id/arr_pokemon" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/txt_cp"
+        android:layout_alignStart="@+id/editText" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/dust"
+        android:layout_alignBottom="@+id/txt_dust"
+        android:layout_alignStart="@+id/editText2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:entries="@array/yaynay"
+        android:layout_alignBottom="@+id/txt_powered"
+        android:layout_alignStart="@+id/spinner" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/txt_def"
+        android:layout_alignStart="@+id/spinner2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/checkBox2"
+        android:layout_alignBottom="@+id/txt_def"
+        android:layout_alignStart="@+id/checkBox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/checkBox3"
+        android:layout_alignBottom="@+id/txt_hpbox"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_calc"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/checkBox3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reset"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

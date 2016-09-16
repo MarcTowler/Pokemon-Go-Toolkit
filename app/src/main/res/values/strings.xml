@@ -1,4 +1,118 @@
 <resources>
     <string name="app_name">Pokemon Go Toolkit</string>
+    <string name="title_activity_evo">Evolution Calculator</string>
+    <string name="title_activity_iv">IV Calculator</string>
+    <string name="title_activity_egg">Egg Hatching Guide</string>
     <string name="action_settings">Settings</string>
+    <string name="action_EvoCalc">Evolution Calculator</string>
+    <string name="action_IVCalc">IV Calculator</string>
+    <string name="action_EggGuide">Egg Hatching Guide</string>
+    <string name="txt_numCandies">\# of candies:</string>
+    <string name="txt_numPokemon">\# of Pokémon</string>
+    <string name="txt_selectPokemon">Select Pokémon:</string>
+    <string name="txt_pokemon">Pokémon</string>
+    <string name="txt_cp">CP</string>
+    <string name="txt_hp">HP</string>
+    <string name="txt_dust">Dust</string>
+    <string name="txt_power">Powered</string>
+    <string name="txt_atk">Att</string>
+    <string name="txt_def">Def</string>
+    <string name="txt_best">Best</string>
+    <string name="btn_refine">Refine</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_calc">Calculate</string>
+    <string name="btn_2km">2km Egg</string>
+    <string name="btn_5km">5km Egg</string>
+    <string name="btn_10km">10km Egg</string>
+    <string name="txt_comb">Possible combinations:</string>
+    <string name="txt_egg_choice">Choose the egg size you wish to know about:</string>
+
+
+    <string-array name="evo_pokemoncandies">
+        <item>----------</item>
+        <item>Caterpie</item>
+        <item>Pidgey</item>
+        <item>Weedle</item>
+        <item>Eevee</item>
+        <item>Oddish</item>
+        <item>Rattata</item>
+        <item>Abra</item>
+        <item>Bellsprout</item>
+        <item>Bulbasaur</item>
+        <item>Charmander</item>
+        <item>Dratini</item>
+        <item>Gastly</item>
+        <item>Geodude</item>
+        <item>Machop</item>
+        <item>Nidoran â™€</item>
+        <item>Nidoran â™‚</item>
+        <item>Poliwag</item>
+        <item>Squirtle</item>
+        <item>Drowzee</item>
+        <item>Spearow</item>
+        <item>Zubat</item>
+        <item>Clefairy</item>
+        <item>Cubone</item>
+        <item>Diglett</item>
+        <item>Doduo</item>
+        <item>Ekans</item>
+        <item>Exeggcute</item>
+        <item>Goldeen</item>
+        <item>Grimer</item>
+        <item>Growlithe</item>
+        <item>Horsea</item>
+        <item>Jigglypuff</item>
+        <item>Kabuto</item>
+        <item>Kakuna</item>
+        <item>Koffing</item>
+        <item>Krabby</item>
+        <item>Magnemite</item>
+        <item>Mankey</item>
+        <item>Meowth</item>
+        <item>Metapod</item>
+        <item>Omanyte</item>
+        <item>Paras</item>
+        <item>Pidgeotto</item>
+        <item>Pikachu</item>
+        <item>Ponyta</item>
+        <item>Psyduck</item>
+        <item>Rhyhorn</item>
+        <item>Sandshrew</item>
+        <item>Seel</item>
+        <item>Shellder</item>
+        <item>Slowpoke</item>
+        <item>Staryu</item>
+        <item>Tentacool</item>
+        <item>Venonat</item>
+        <item>Voltorb</item>
+        <item>Vulpix</item>
+        <item>Charmeleon</item>
+        <item>Dragonair</item>
+        <item>Gloom</item>
+        <item>Graveler</item>
+        <item>Haunter</item>
+        <item>Ivysaur</item>
+        <item>Kadabra</item>
+        <item>Machoke</item>
+        <item>Nidorina</item>
+        <item>Nidorino</item>
+        <item>Poliwhirl</item>
+        <item>Wartortle</item>
+        <item>Weepinbell</item>
+        <item>Magikarp</item>
+    </string-array>
+    <string-array name="dust">
+        <item>200</item>
+        <item>400</item>
+        <item>600</item>
+        <item>800</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="yaynay">
+        <item></item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
 </resources>

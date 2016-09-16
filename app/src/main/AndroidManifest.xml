@@ -11,6 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation = "portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EvoActivity"></activity>
+        <activity
+            android:name=".EvoActivity"
+            android:label="@string/title_activity_evo"
+            android:screenOrientation = "portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IVActivity"
+            android:label="@string/title_activity_iv"
+            android:screenOrientation = "portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EggActivity"
+            android:label="@string/title_activity_egg"
+            android:screenOrientation = "portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

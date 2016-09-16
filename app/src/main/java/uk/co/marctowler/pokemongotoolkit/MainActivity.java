@@ -22,6 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button btnEvolution = (Button) findViewById(R.id.EvoCalc);
+        Button btnIV = (Button) findViewById(R.id.IVCalc);
+        Button btnEgg = (Button) findViewById(R.id.EggHatch);
+
+        btnIV.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, IVActivity.class));
+            }
+        });
+
+        btnEgg.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, EggActivity.class));
+            }
+        });
 
         btnEvolution.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
