@@ -41,9 +41,9 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     int numOfPokemon;
     Spinner spinner;
     String pokemon;
-    ArrayList<String> pokeEntryList;
-    ArrayList<Integer> totalEntryList;
-    ArrayList<Integer> candyEntryList;
+    ArrayList<String> pokeEntryList = new ArrayList<>();
+    ArrayList<Integer> totalEntryList = new ArrayList<>();
+    ArrayList<Integer> candyEntryList = new ArrayList<>();
 
     /* renamed from: com.natashahaggard.pidgeycalculator.MainActivity.1 */
     class C01801 implements OnClickListener {
@@ -72,9 +72,7 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         this.spinner = (Spinner) findViewById(R.id.pokemonList);
         this.pokemon = spinner.toString();
         this.howManyPokemon = (EditText) findViewById(R.id.mon_num);
-        //this.pokeCount = Integer.parseInt(howManyPokemon.toString());
         this.howManyCandies = (EditText) findViewById(R.id.can_num);
-        //this.candyCount = Integer.parseInt(howManyCandies.toString());
         this.button_calculate = (Button) findViewById(R.id.btn_calc);
         this.button_reset = (Button) findViewById(R.id.btn_reset);
         this.button_reset.setOnClickListener(new C01801());
@@ -83,13 +81,16 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*Button btn_add = (Button) findViewById(R.id.btn_add);
+        Button btn_add = (Button) findViewById(R.id.btn_add);
 
         btn_add.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                pokemon = spinner.getSelectedItem().toString();
+                pokeCount = Integer.parseInt(howManyPokemon.getText().toString());
+                candyCount = Integer.parseInt(howManyCandies.getText().toString());
                 addPokemon(pokemon, pokeCount, candyCount);
             }
-        });*/
+        });
     }
 
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
