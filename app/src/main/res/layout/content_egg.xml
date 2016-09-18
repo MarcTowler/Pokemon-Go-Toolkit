@@ -33,16 +33,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_5km"
-        android:id="@+id/btn_5km"
+        android:text="@string/btn_10km"
+        android:id="@+id/btn_10km"
         android:layout_alignBottom="@+id/btn_2km"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_10km"
-        android:id="@+id/btn_10km"
-        android:layout_alignBottom="@+id/btn_5km"
+        android:text="@string/btn_5km"
+        android:id="@+id/btn_5km"
+        android:layout_alignBottom="@+id/btn_10km"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

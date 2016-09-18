@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 import android.content.DialogInterface;
@@ -45,7 +46,6 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     ArrayList<Integer> totalEntryList = new ArrayList<>();
     ArrayList<Integer> candyEntryList = new ArrayList<>();
 
-    /* renamed from: com.natashahaggard.pidgeycalculator.MainActivity.1 */
     class C01801 implements OnClickListener {
         C01801() {
         }
@@ -56,7 +56,6 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         }
     }
 
-    /* renamed from: com.natashahaggard.pidgeycalculator.MainActivity.2 */
     class C01812 implements DialogInterface.OnClickListener {
         C01812() {
         }
@@ -96,15 +95,15 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         Toast.makeText(this, "You Selected " + ((TextView) view).getText(), 0).show();
         int value = this.spinner.getSelectedItemPosition();
-        if (value >= 0 && value <= 2) {
+        if (value > 0 && value <= 3) {
             this.candiesPerEvolution = 12;
-        } else if ((value >= 3 && value <= 5) || (value >= 9 && value <= 20)) {
+        } else if ((value >= 4 && value <= 6) || (value >= 10 && value <= 21)) {
             this.candiesPerEvolution = 25;
-        } else if ((value >= 6 && value <= 8) || (value >= 21 && value <= 55)) {
+        } else if ((value >= 7 && value <= 9) || (value >= 22 && value <= 56)) {
             this.candiesPerEvolution = 50;
-        } else if (value >= 56 && value <= 68) {
+        } else if (value >= 57 && value <= 69) {
             this.candiesPerEvolution = 100;
-        } else if (value == 69) {
+        } else if (value == 70) {
             this.candiesPerEvolution = 400;
         }
     }
