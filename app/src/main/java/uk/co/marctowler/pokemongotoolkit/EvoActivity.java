@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 
 import android.content.DialogInterface;
@@ -87,9 +86,12 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         button_add.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 pokemon = spinner.getSelectedItem().toString();
-                pokeCount = Integer.parseInt(howManyPokemon.getText().toString());
-                candyCount = Integer.parseInt(howManyCandies.getText().toString());
-                addPokemon(pokemon, pokeCount, candyCount);
+
+                if(!(howManyPokemon.getText().toString().equals("") || howManyCandies.getText().toString().equals(""))) {
+                    pokeCount = Integer.parseInt(howManyPokemon.getText().toString());
+                    candyCount = Integer.parseInt(howManyCandies.getText().toString());
+                    addPokemon(pokemon, pokeCount, candyCount);
+                }
             }
         });
     }
