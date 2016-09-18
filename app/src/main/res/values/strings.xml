@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pokemon Go Toolkit</string>
+    <string name="app_name">Pokémon Go Toolkit</string>
     <string name="title_activity_evo">Evolution Calculator</string>
     <string name="title_activity_iv">IV Calculator</string>
     <string name="title_activity_egg">Egg Hatching Guide</string>
@@ -27,6 +27,7 @@
     <string name="btn_10km">10km Egg</string>
     <string name="txt_comb">Possible combinations:</string>
     <string name="txt_egg_choice">Choose the egg size you wish to know about:</string>
+    <string name="txt_chosen_mon">Your selected Pokémon:</string>
 
 
     <string-array name="evo_pokemoncandies">

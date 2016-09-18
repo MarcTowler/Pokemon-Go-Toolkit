@@ -42,6 +42,7 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     int numOfPokemon;
     Spinner spinner;
     String pokemon;
+    TextView output;
     ArrayList<String> pokeEntryList = new ArrayList<>();
     ArrayList<Integer> totalEntryList = new ArrayList<>();
     ArrayList<Integer> candyEntryList = new ArrayList<>();
@@ -77,12 +78,13 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         this.button_reset.setOnClickListener(new C01801());
         //this.spinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.evo_pokemoncandies, 17367049));
         this.spinner.setOnItemSelectedListener(this);
+        this.output = (TextView) findViewById(R.id.output);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btn_add = (Button) findViewById(R.id.btn_add);
+        this.button_add = (Button) findViewById(R.id.btn_add);
 
-        btn_add.setOnClickListener(new View.OnClickListener(){
+        button_add.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 pokemon = spinner.getSelectedItem().toString();
                 pokeCount = Integer.parseInt(howManyPokemon.getText().toString());
@@ -93,8 +95,12 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     }
 
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this, "You Selected " + ((TextView) view).getText(), 0).show();
         int value = this.spinner.getSelectedItemPosition();
+
+        if(value > 0) {
+            Toast.makeText(this, "You Selected " + ((TextView) view).getText(), 0).show();
+        }
+
         if (value > 0 && value <= 3) {
             this.candiesPerEvolution = 12;
         } else if ((value >= 4 && value <= 6) || (value >= 10 && value <= 21)) {
@@ -174,6 +180,15 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         pokeEntryList.add(pokemon);
         totalEntryList.add(totalCount);
         candyEntryList.add(candy);
+
+        int arraySize = pokeEntryList.size();
+        for(int i = 0; i < arraySize; i++) {
+            if(i == 0) {
+                output.setText(pokeEntryList.get(i) + "\t\t" + totalEntryList.get(i) + "\t\t" + candyEntryList.get(i) + "\n");
+            } else {
+                output.append(pokeEntryList.get(i) + "\t\t" + totalEntryList.get(i) + "\t\t" + candyEntryList.get(i) + "\n");
+            }
+        }
     }
 
     private String calculate() {
