@@ -45,6 +45,7 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     ArrayList<String> pokeEntryList = new ArrayList<>();
     ArrayList<Integer> totalEntryList = new ArrayList<>();
     ArrayList<Integer> candyEntryList = new ArrayList<>();
+    ArrayList<Integer> requiredCandy = new ArrayList<>();
 
     class C01801 implements OnClickListener {
         C01801() {
@@ -90,7 +91,8 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
                 if(!(howManyPokemon.getText().toString().equals("") || howManyCandies.getText().toString().equals(""))) {
                     pokeCount = Integer.parseInt(howManyPokemon.getText().toString());
                     candyCount = Integer.parseInt(howManyCandies.getText().toString());
-                    addPokemon(pokemon, pokeCount, candyCount);
+
+                    addPokemon(pokemon, candiesPerEvolution, pokeCount, candyCount);
                 }
             }
         });
@@ -100,7 +102,7 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         int value = this.spinner.getSelectedItemPosition();
 
         if(value > 0) {
-            Toast.makeText(this, "You Selected " + ((TextView) view).getText(), 0).show();
+            Toast.makeText(this, "You Selected " + ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
         }
 
         if (value > 0 && value <= 3) {
@@ -178,10 +180,11 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
         return numOfPokemon.intValue() * candiesPerEvolution.intValue();
     }
 
-    private void addPokemon(String pokemon, Integer totalCount, Integer candy) {
+    private void addPokemon(String pokemon, Integer reqCandy, Integer totalCount, Integer candy) {
         pokeEntryList.add(pokemon);
         totalEntryList.add(totalCount);
         candyEntryList.add(candy);
+        requiredCandy.add(reqCandy);
 
         int arraySize = pokeEntryList.size();
         for(int i = 0; i < arraySize; i++) {
@@ -194,10 +197,13 @@ public class EvoActivity extends AppCompatActivity implements OnItemSelectedList
     }
 
     private String calculate() {
+        int pokemonCount = 0;
         try {
-            this.numOfPokemon = Integer.parseInt(this.howManyPokemon.getText().toString());
-            this.numOfCandies = Integer.parseInt(this.howManyCandies.getText().toString());
-            int pokemonCount = evolvePokemonNow();
+            if(pokeEntryList.size() == 0) {
+                this.numOfPokemon = Integer.parseInt(this.howManyPokemon.getText().toString());
+                this.numOfCandies = Integer.parseInt(this.howManyCandies.getText().toString());
+                pokemonCount = evolvePokemonNow();
+            }
             return displayResults(transferPokemon(), evolveMorePokemon(pokemonCount), pokemonCount, gainXP(pokemonCount), gainXP_LuckyEgg(pokemonCount), candiesLeftOver(pokemonCount), pokemonLeftOver(pokemonCount), howManyMinutes(pokemonCount), candiesRequiredForCurrentPokemon(Integer.valueOf(this.numOfPokemon), Integer.valueOf(pokemonCount)));
         } catch (NumberFormatException e) {
             this.numOfPokemon = 0;

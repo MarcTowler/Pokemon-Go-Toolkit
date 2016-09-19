@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pkmn_2km">
+        <item>Weedle</item>
+        <item>Pidgey</item>
+        <item>Rattata</item>
+        <item>Caterpie</item>
+        <item>Zubat</item>
+        <item>Magikarp</item>
+        <item>Bulbasaur</item>
+        <item>Charmander</item>
+        <item>Pikachu</item>
+        <item>Geodude</item>
+        <item>Spearow</item>
+        <item>Squirtle</item>
+        <item>Jigglypuff</item>
+        <item>Clefairy</item>
+    </string-array>
+
+    <string-array name="val_2km">
+        <item>13.507%</item>
+        <item>13.211%</item>
+        <item>10.466%</item>
+        <item>10.136%</item>
+        <item>9.74%</item>
+        <item>9.114%</item>
+        <item>7.69%</item>
+        <item>5.637%</item>
+        <item>3.842%</item>
+        <item>3.566%</item>
+        <item>3.525%</item>
+        <item>3.418%</item>
+        <item>2.414%</item>
+        <item>1.199%</item>
+    </string-array>
+
+    <string-array name="pkmn_5km">
+
+    </string-array>
+
+    <string-array name="val_5km">
+
+    </string-array>
+
+    <string-array name="pkmn_10km">
+
+    </string-array>
+
+    <string-array name="val_10km">
+
+    </string-array>
+
+</resources>
